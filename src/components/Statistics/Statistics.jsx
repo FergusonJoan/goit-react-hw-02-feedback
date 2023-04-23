@@ -1,4 +1,5 @@
 import React from 'react';
+import style from './Statistics.module.scss';
 
 export const Statistics = ({
   good,
@@ -8,12 +9,12 @@ export const Statistics = ({
   positivePercentage,
 }) => {
   return (
-    <>
-      <p>Good: {good}</p>
-      <p>Neutral: {neutral} </p>
-      <p>Bad: {bad}</p>
-      <p>Total: {total}</p>
-      <p>Positive feedback: {positivePercentage}%</p>
-    </>
+    <ul>
+      <li>Good: {good}</li>
+      <li>Neutral: {neutral} </li>
+      <li>Bad: {bad}</li>
+      <li>Total: {total}</li>
+      <li>Positive feedback: {positivePercentage}%</li>
+    </ul>
   );
 };

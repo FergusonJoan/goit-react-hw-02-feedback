@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './index.js';
-
-import { FeedbackOptions, Section, Statistics, Notification } from 'components';
+import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
+import { Section, Statistics, Notification } from 'components';
 
 export class App extends Component {
   state = {
@@ -10,11 +10,10 @@ export class App extends Component {
     bad: 0,
   };
 
-  onLeaveFeedback = e => {
-    const option = e.target.option;
+  onLeaveFeedback = grade => {
     this.setState(prevState => {
       return {
-        [option]: prevState[option] + 1,
+        [grade]: prevState[`${grade}`] + 1,
       };
     });
   };
@@ -34,9 +33,12 @@ export class App extends Component {
   render() {
     const { good, neutral, bad } = this.state;
     return (
-      <>
+      <div className="container">
         <Section title="Please leave feedback">
-          <FeedbackOptions click={this.onLeaveFeedback} />
+          <FeedbackOptions
+            options={Object.keys(this.state)}
+            onLeaveFeedback={this.onLeaveFeedback}
+          />
         </Section>
         {this.countTotalFeedback === 0 ? (
           <Notification message="There is no feedback"></Notification>
@@ -51,7 +53,7 @@ export class App extends Component {
             </Statistics>
           </Section>
         )}
-      </>
+      </div>
     );
   }
 }

@@ -1,11 +1,9 @@
 .list {
   display: flex;
   padding: 0;
+  margin: 0;
   list-style-type: none;
-
-  .item + .item {
-    margin-left: 10px;
-  }
+  gap: 15px;
 
   .item {
     .button {
@@ -15,8 +13,6 @@
       font-size: 18px;
       font-family: Georgia, 'Times New Roman', Times, serif;
       cursor: pointer;
-      margin-right: 15px;
-      margin-bottom: 20px;
     }
   }
 }

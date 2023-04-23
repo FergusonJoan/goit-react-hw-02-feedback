@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './index.js';
-import scss from './FeedbackOptions/FeedbackOptions.module.scss';
 
 import { FeedbackOptions, Section, Statistics, Notification } from 'components';
 
@@ -35,7 +34,7 @@ export class App extends Component {
   render() {
     const { good, neutral, bad } = this.state;
     return (
-      <div className={scss.review}>
+      <>
         <Section title="Please leave feedback">
           <FeedbackOptions click={this.onLeaveFeedback} />
         </Section>
@@ -52,7 +51,7 @@ export class App extends Component {
             </Statistics>
           </Section>
         )}
-      </div>
+      </>
     );
   }
 }

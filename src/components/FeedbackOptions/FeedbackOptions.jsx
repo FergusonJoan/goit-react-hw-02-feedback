@@ -5,16 +5,16 @@ import style from './FeedbackOptions.module.scss';
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <div className={style.list}>
-      {options.map(option => {
+      {options.map(grade => (
         <button
-          key={option}
+          key={grade}
           type="button"
           className={style.button}
-          onClick={() => onLeaveFeedback(option)}
+          onClick={() => onLeaveFeedback(grade)}
         >
-          {option}
-        </button>;
-      })}
+          {grade}
+        </button>
+      ))}
     </div>
   );
 };

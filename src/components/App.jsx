@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './index.js';
-import FeedbackOptions from './FeedbackOptions/FeedbackOptions.jsx';
-
+import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions.jsx';
 import { Section, Statistics, Notification } from 'components';
 
 export class App extends Component {
@@ -49,13 +48,13 @@ export class App extends Component {
           <Notification message="There is no feedback" />
         ) : (
           <Section title={'Statistics'}>
-            <Statistics>
+            <Statistics
               good={good}
               neutral={neutral}
               bad={bad}
               total={totalFeedback}
               positivePercentage={positiveFeedbackPercentage}
-            </Statistics>
+            ></Statistics>
           </Section>
         )}
       </div>

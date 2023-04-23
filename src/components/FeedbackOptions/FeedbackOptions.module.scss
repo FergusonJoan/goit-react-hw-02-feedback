@@ -5,14 +5,12 @@
   list-style-type: none;
   gap: 15px;
 
-  .item {
-    .button {
-      background-color: #fff;
-      border-radius: 5px;
-      border: 1px solid black;
-      font-size: 18px;
-      font-family: Georgia, 'Times New Roman', Times, serif;
-      cursor: pointer;
-    }
+  .button {
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
   }
 }

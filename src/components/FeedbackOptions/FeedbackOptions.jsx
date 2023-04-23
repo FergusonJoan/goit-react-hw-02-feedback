@@ -11,16 +11,14 @@ class ButtonList extends Component {
       <ul className={style.list}>
         {options.map((grade, index) => {
           return (
-            <li className={style.item}>
-              <button
-                key={index}
-                type="button"
-                className={style.button}
-                onClick={() => onLeaveFeedback(grade)}
-              >
-                {grade[0].toUpperCase() + grade.slice(1)}
-              </button>
-            </li>
+            <button
+              key={index}
+              type="button"
+              className={style.button}
+              onClick={() => onLeaveFeedback(grade)}
+            >
+              {grade[0].toUpperCase() + grade.slice(1)}
+            </button>
           );
         })}
       </ul>

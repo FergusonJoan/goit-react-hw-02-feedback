@@ -19,3 +19,12 @@ code {
   flex-direction: column;
   margin: 0 auto;
 }
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  font-size: 18px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
